@@ -1,6 +1,5 @@
 import readlinesync = require("readline-sync");
 import { colors } from "./src/util/Colors";
-import { Conta } from "./src/model/Conta";
 import { ContaCorrente } from "./src/model/ContaCorrente";
 import { ContaPoupanca } from "./src/model/ContaPoupanca";
 
@@ -8,23 +7,6 @@ export function main() {
 
     let opcao: number;
 
-    // Novas instâncias da Classe Conta (Objetos)
-    const c1: Conta = new Conta(1, 1234, 1, 'Ana Silva', 800000.00);
-    const c2: Conta = new Conta(2, 1234, 2, 'Jean Lima', 600000.00);
-
-    //c1.visualizar();
-
-    // Saque nas Contas
-    console.log(`\nSacar 100 Reais da Conta C1: ${c1.sacar(100)}`)
-    // c1.visualizar();
-    console.log(`\nSacar 700000.00 Reais da Conta C2: ${c2.sacar(700000)}`)
-    //c2.visualizar();
-
-    // Deposito nas Contas
-    console.log(`\n Depositar 200000 Reais da Conta C1: ${c1.depositar(200000)}`)
-    //c1.visualizar();
-    console.log(`\nDepositar 300000 Reais da Conta C2: ${c2.depositar(300000)}`)
-    //c2.visualizar();
 
     // Novas instâncias da Classe Conta Corrente
     const cc1: ContaCorrente = new ContaCorrente(3, 1234, 1, 'Amanda Magro', 1000000.00, 100000);
@@ -37,8 +19,8 @@ export function main() {
     cc2.visualizar();
 
     // Novas instâncias da Classe Conta Poupança 
-    const cp1: ContaPoupanca = new ContaPoupanca(5, 1234, 2,"Hugo Silva", 500000.00, 4)
-    
+    const cp1: ContaPoupanca = new ContaPoupanca(5, 1234, 2, "Hugo Silva", 500000.00, 4)
+
     cp1.sacar(150000)
     cp1.visualizar()
 
@@ -50,7 +32,7 @@ export function main() {
         console.log("                                                     ");
         console.log("                BANCO DO BRAZIL COM Z                ");
         console.log("                                                     ");
-        console.log("*****************************************************",colors.reset);
+        console.log("*****************************************************", colors.reset);
         console.log("                                                     ");
         console.log("            1 - Criar Conta                          ");
         console.log("            2 - Listar todas as Contas               ");
@@ -62,7 +44,7 @@ export function main() {
         console.log("            8 - Transferir valores entre Contas      ");
         console.log("            9 - Sair                                 ");
         console.log("                                                     ");
-        console.log(colors.bg.black, colors.fg.cyan,"*****************************************************");
+        console.log(colors.bg.black, colors.fg.cyan, "*****************************************************");
         console.log("                                                     ",
             colors.reset,);
 
