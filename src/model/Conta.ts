@@ -97,7 +97,7 @@ export class Conta{
 		this._saldo = value;
 	}
     
-    // Método Scar dinheiro da conta
+    // Método Sacar dinheiro da conta
     public sacar(valor: number): boolean{
         if(this._saldo < valor){
              console.log("Saldo Insuficiente!")
